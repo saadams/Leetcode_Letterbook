@@ -5,7 +5,7 @@ import (
 )
 
 
-func selection_sort(arr []int) {
+func selectionSort(arr []int) {
 	
 	len := len(arr)
 	// we need min 
@@ -41,7 +41,7 @@ func main() {
 
 	fmt.Println("Unswaped Arr:" , arr1)
 
-	selection_sort(arr1[:])
+	selectionSort(arr1[:])
 
 	fmt.Println("Swapped Arr:" , arr1)
 }

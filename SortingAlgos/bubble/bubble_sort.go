@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 
-func bubble_sort(arr []int) {
+func bubbleSort(arr []int) {
 
 	len := len(arr)
 	var swapped bool
@@ -43,7 +43,7 @@ func main() {
 
 	fmt.Println("Unswaped Arr:" , arr1)
 
-	bubble_sort(arr1[:])
+	bubbleSort(arr1[:])
 
 	fmt.Println("Swapped Arr:" , arr1)
 
