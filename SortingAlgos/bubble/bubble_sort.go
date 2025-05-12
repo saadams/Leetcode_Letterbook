@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 
 func bubbleSort(arr []int) {
@@ -34,18 +37,29 @@ func bubbleSort(arr []int) {
 }
 
 
+func randomizeArr(randMin int, randMax int, lengthArr int) []int {
+	// add random nums to array up to length
+	var arr []int
+	for i := 0; i < lengthArr; i++ {
+		randInt := rand.Intn(randMax-randMin) + randMin
+		arr = append(arr, randInt)
+	}
+	return arr
+}
+
 func main() {
 
-	var arr1 = [...] int {5,20,25,67,89,223,5,54}
+	//var arr1 = [...] int {1,5,6,3,7,9,55,33,22,11}
 
+	arr2 := randomizeArr(1,1000, 20)
 
-	fmt.Println("hello world")
+	fmt.Println("This is the random array: ", arr2)
 
-	fmt.Println("Unswaped Arr:" , arr1)
+	fmt.Println("Hello world!")
 
-	bubbleSort(arr1[:])
-
-	fmt.Println("Swapped Arr:" , arr1)
+	//bubbleSort(arr1[:])
+	bubbleSort(arr2[:])
+	fmt.Println("Sorted arr: " , arr2)
 
 
 }
