@@ -47,7 +47,6 @@ func main() {
 
 	fmt.Println("This is the random array: ", arr2)
 
-	fmt.Println("Hello world!")
 
 	//bubbleSort(arr1[:])
 	selectionSort(arr2[:])
